@@ -78,3 +78,13 @@ CREATE TABLE IF NOT EXISTS `__TABLE_PREFIX__roles_permissions` (
   UNIQUE KEY `role_id` (`role_id`,`action`),
   CONSTRAINT `__TABLE_PREFIX__roles_permissions_ibfk_1` FOREIGN KEY (`role_id`) REFERENCES `__TABLE_PREFIX__roles` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `__TABLE_PREFIX__user_reflinks` (
+  `user_id` int(10) unsigned NOT NULL,
+  `type` varchar(50) NOT NULL,
+  `code` varchar(255) NOT NULL,
+  `data` text,
+  `created` datetime NOT NULL,
+  UNIQUE KEY `unique_reflink` (`user_id`,`code`),
+  CONSTRAINT `__TABLE_PREFIX__user_reflinks_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `__TABLE_PREFIX__users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
