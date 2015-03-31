@@ -18,7 +18,12 @@
 		"forum":    "http://www.kodicms.ru/forum",
 		"source":   "https://github.com/KodiCMS/module-users"
 	},
+	"autoload": {
+		"psr-4": {
+			"KodiCMS\\Users\\": 	"classes"
+		}
+	},
 	"require": {
-		"kodicms/core": "dev-master"
+		"kodicms/core": "dev-psr_4"
 	}
 }
