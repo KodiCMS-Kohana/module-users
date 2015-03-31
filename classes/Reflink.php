@@ -1,4 +1,4 @@
-<?php defined( 'SYSPATH' ) or die( 'No direct access allowed.' );
+<?php namespace KodiCMS\Users;
 
 /**
  * @package		KodiCMS/Reflink
@@ -11,11 +11,11 @@ abstract class Reflink {
 	
 	public static function factory(Model_User_Reflink $reflink)
 	{
-		$class_name = 'Reflink_' . ucfirst($reflink->type);
+		$class_name = $reflink->class;
 		
 		if (!class_exists($class_name))
 		{
-			throw new Reflink_Exception('Class :class not exists', array(
+			throw new Reflink\Exception('Class :class not exists', array(
 				':class' => $class_name));
 		}
 		 

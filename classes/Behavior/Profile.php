@@ -1,6 +1,6 @@
-<?php defined('SYSPATH') or die('No direct access allowed.');
+<?php namespace KodiCMS\Users\Behavior;
 
-class Behavior_Profile extends Behavior_Abstract
+class Profile extends Behavior_Abstract
 {
 	/**
 	 * 

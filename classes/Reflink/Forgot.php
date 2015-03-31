@@ -1,4 +1,4 @@
-<?php defined( 'SYSPATH' ) or die( 'No direct access allowed.' );
+<?php namespace KodiCMS\Users\Reflink;
 
 /**
  * @package		KodiCMS/Reflink
@@ -8,7 +8,7 @@
  * @copyright	(c) 2012-2014 butschster
  * @license		http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt
  */
-class Reflink_Forgot extends Reflink {
+class Forgot extends Reflink {
 	
 	public function confirm()
 	{
