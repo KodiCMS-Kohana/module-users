@@ -1,5 +1,5 @@
 {
-	"name":        "kodicms/users",
+	"name":        "kodicms_kohana/users",
 	"type":        "kodicms-module",
 	"description": "The official KodiCMS users module",
 	"homepage":    "http://www.kodicms.ru/",
